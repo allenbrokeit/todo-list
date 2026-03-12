@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { DragDropContext } from '@hello-pangea/dnd';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faTableColumns, faPlus, faSearch, faBell, faUserCircle } from '@fortawesome/free-solid-svg-icons';
+import { faTableColumns, faPlus } from '@fortawesome/free-solid-svg-icons';
 import Column from './components/Column';
 import TaskModal from './components/TaskModal';
 
@@ -140,21 +140,7 @@ function App() {
         </div>
 
         <div className="flex items-center gap-6">
-          <div className="relative group hidden sm:block">
-            <FontAwesomeIcon icon={faSearch} className="absolute left-3 top-1/2 -translate-y-1/2 text-muted-foreground w-3.5 h-3.5" />
-            <input 
-              type="text" 
-              placeholder="Search tasks..." 
-              className="bg-secondary/50 border border-border/50 rounded-full pl-10 pr-4 py-1.5 text-sm w-64 focus:outline-none focus:ring-2 focus:ring-primary/30 transition-all"
-            />
-          </div>
-          <div className="flex items-center gap-4 text-muted-foreground">
-            <button className="hover:text-foreground transition-colors relative">
-              <FontAwesomeIcon icon={faBell} className="w-5 h-5" />
-              <span className="absolute -top-1 -right-1 w-4 h-4 bg-red-500 text-white text-[10px] font-bold rounded-full flex items-center justify-center border-2 border-background">2</span>
-            </button>
-            <FontAwesomeIcon icon={faUserCircle} className="w-8 h-8 hover:text-foreground cursor-pointer transition-colors" />
-          </div>
+          {/* Header Actions Removed as requested */}
         </div>
       </nav>
 
